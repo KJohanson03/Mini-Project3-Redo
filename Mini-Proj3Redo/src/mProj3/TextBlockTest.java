@@ -86,7 +86,7 @@ public class TextBlockTest {
         assertEquals("", vFlip.row(0));
     } // VerticallyFlippedTest    
 
-    
+
     @Test
     public void LargeVerticallyFlippedTest() throws Exception{
         // Create blocks to use
@@ -230,7 +230,7 @@ public class TextBlockTest {
         VComposition vComposed = new VComposition(topBlock, null);
 
 
-        // 1 spaces to the right
+        
         assertEquals("TOP", vComposed.row(0));  
     } // UpperedHComposeTest    
 
@@ -248,4 +248,50 @@ public class TextBlockTest {
     } // UpperedHComposeTest        
 
 
+    @Test
+    public void CenteredNullTest() throws Exception{
+        
+        Centered centered = new Centered(new TextLine(null), 10);
+        
+        assertEquals("          ", centered.row(0));
+
+    } // CenteredNullTest
+
+
+    @Test
+    public void VerticallyFlippedNullTest() throws Exception{
+
+
+        VerticallyFlipped vFlip = new VerticallyFlipped(null);
+
+        assertEquals("", vFlip.row(0));
+    } // VerticallyFlippedNullTest
+
+    @Test
+    public void HorizontallyFlippedNullTest() throws Exception{
+
+
+        HorizontallyFlipped hFlip = new HorizontallyFlipped(null);
+
+        assertEquals("", hFlip.row(0));
+    } // HorizontallyFlippedNullTest    
+
+    @Test
+    public void TruncatedNullTest() throws Exception{
+
+
+        Truncated trunc = new Truncated(null, 10);
+
+        assertEquals("          ", trunc.row(0));
+    } // TruncatedNullTest 
+
+
+    @Test
+    public void UpperedNullTest() throws Exception{
+
+
+        Uppered upper = new Uppered(null);
+
+        assertEquals("", upper.row(0));
+    } // UpperedNullTest     
 }
